@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import{Input, Label} from "./PhoneBook.styled"
 
 
 const Filter = ({filter, onFilterChange}) => {
-  return( <label htmlFor="">Find contact by name
-      <input defaultValue={filter} type="text" onChange={onFilterChange}/>
-        </label>)
+  return( <Label htmlFor="">Find contact by name
+      <Input defaultValue={filter} type="text" onChange={onFilterChange}/>
+        </Label>)
 }
 export default Filter;
 

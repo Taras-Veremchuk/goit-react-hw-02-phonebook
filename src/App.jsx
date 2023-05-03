@@ -2,6 +2,7 @@ import React from "react";
 import contactData from './Сomponents/ContactData'
 import { ContactForm, ContactList, Filter } from "Сomponents/index";
 import shortid from "shortid";
+import {PhonTitle, ContTitle,  Container} from "./Сomponents/PhoneBook.styled"
 
 
  class App extends React.Component{
@@ -35,14 +36,14 @@ deleteContact = (id) => {
   }
   render() {
     return (
-      <div>
-  <h1>Phonebook</h1>
+      <Container>
+  <PhonTitle>Phonebook</PhonTitle>
         <ContactForm addContact={this.addContact} contacts={ this.state.contacts} />
- <h2>Contacts</h2>
+ <ContTitle>Contacts</ContTitle>
         <Filter filter={ this.statefilter} onFilterChange={this.changeFilter} />
         <ContactList visibleContacts={this.filterContactList()} deleteContact={this.deleteContact} />
 
-    </div>
+    </Container>
   );}
 };
 export default App;
